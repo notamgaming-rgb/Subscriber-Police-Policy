@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="Official privacy policy for Subscriber Police, a Telegram force-subscription bot.">
+  <title>Privacy Center — Subscriber Police</title>
+  <style>
+    :root{
+      --bg:#08090c;--panel:#111319;--panel2:#171a22;--text:#f5f6f8;--muted:#a5aab6;
+      --gold:#dfbd77;--gold2:#a98038;--line:rgba(223,189,119,.23);--stroke:rgba(255,255,255,.075);
+      --green:#a6d8b4;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:22px}
+    body{
+      margin:0;background:
+        radial-gradient(ellipse at 50% -15%,rgba(223,189,119,.16),transparent 42%),
+        radial-gradient(ellipse at 0% 55%,rgba(67,82,122,.09),transparent 30%),
+        var(--bg);color:var(--text);
+      font:15px/1.75 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+    .shell{width:min(100% - 34px,1020px);margin:auto;padding:28px 0 46px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:23px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:13px;letter-spacing:1.05px}
+    .logo{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;color:#17130a;
+      background:linear-gradient(145deg,#f5e4b7 0%,#dfbd77 46%,#a98038 100%);
+      box-shadow:0 5px 28px rgba(223,189,119,.17);font-size:22px}
+    .top-label{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;
+      color:#e6cc94;font-size:10px;letter-spacing:1.4px;font-weight:850}
+    .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px #dfbd7780}
+    .hero{position:relative;overflow:hidden;text-align:center;padding:clamp(34px,7vw,66px) 22px 42px;
+      border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(29,30,36,.98),rgba(13,14,19,.98));
+      box-shadow:0 26px 85px rgba(0,0,0,.28)}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(223,189,119,.10);border-radius:50%;pointer-events:none}
+    .hero:before{width:350px;height:350px;top:-270px;left:calc(50% - 175px)}
+    .hero:after{width:270px;height:270px;bottom:-230px;left:calc(50% - 135px)}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:10px;letter-spacing:3px;font-weight:900}
+    .crest{width:82px;height:82px;margin:20px auto 18px;display:grid;place-items:center;border-radius:25px;
+      border:1px solid var(--line);background:linear-gradient(145deg,rgba(223,189,119,.16),rgba(223,189,119,.035));
+      box-shadow:inset 0 0 28px rgba(223,189,119,.05),0 12px 36px rgba(0,0,0,.2);font-size:40px}
+    h1{font-size:clamp(34px,6vw,56px);line-height:1.07;letter-spacing:-1.8px;margin:0 0 15px}
+    .hero-desc{max-width:630px;margin:auto;color:var(--muted);font-size:15px}
+    .hero-desc strong{color:#fff}
+    .meta{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:23px}
+    .meta span{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--stroke);background:#ffffff05;border-radius:999px;padding:7px 11px;font-size:11px;color:#c6cad3}
+    .meta b{color:var(--gold);font-weight:700}
+    .callout{display:flex;gap:12px;align-items:flex-start;margin:18px 0 22px;padding:15px 17px;border:1px solid var(--line);
+      border-left:3px solid var(--gold);border-radius:14px;background:rgba(223,189,119,.055)}
+    .callout-icon{flex:0 0 28px;width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:var(--gold);color:#17130a;font-weight:900}
+    .callout p{margin:0;color:#d0d3db;font-size:12px;line-height:1.7}.callout strong{color:#fff}
+    .layout{display:grid;grid-template-columns:225px minmax(0,1fr);gap:18px;align-items:start}
+    .sidebar{position:sticky;top:16px;border:1px solid var(--stroke);border-radius:18px;background:rgba(17,19,25,.92);padding:17px 12px}
+    .side-head{padding:0 9px 11px;color:var(--gold);font-size:10px;letter-spacing:2.1px;font-weight:900}
+    .nav a{display:flex;align-items:center;gap:10px;padding:8px 9px;border-radius:9px;color:#c0c5cf;font-size:12px;line-height:1.4;transition:background .18s,color .18s}
+    .nav a span{font-size:10px;color:#7d8390;font-weight:800}
+    .nav a:hover{background:rgba(223,189,119,.09);color:#f3d99c;text-decoration:none}
+    main{display:grid;gap:12px;min-width:0}
+    section{position:relative;padding:22px 23px;border:1px solid var(--stroke);border-radius:17px;background:linear-gradient(145deg,rgba(21,23,30,.97),rgba(15,17,22,.97))}
+    section:target{border-color:var(--line)}
+    .section-head{display:flex;align-items:center;gap:12px;margin-bottom:11px}
+    .number{flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:11px;color:var(--gold);background:rgba(223,189,119,.045);font-size:11px;font-weight:900}
+    h2{margin:0;font-size:17px;letter-spacing:-.3px;line-height:1.4}
+    p,li{font-size:13.5px;color:#c8cdd6}
+    p{margin:7px 0}
+    ul{margin:8px 0 0;padding-left:19px}li{padding:3px 0}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:#f1d99e;background:rgba(223,189,119,.09);border:1px solid rgba(223,189,119,.13);padding:2px 6px;border-radius:6px;font-size:.92em}
+    .footer{margin-top:24px;padding:22px 10px 0;border-top:1px solid var(--stroke);text-align:center;color:#7c8290;font-size:11px}
+    .footer-brand{color:var(--gold);font-weight:900;letter-spacing:2px;margin-bottom:4px}
+    .footer-links{display:flex;justify-content:center;gap:17px;flex-wrap:wrap;margin-top:9px}
+    @media(max-width:760px){
+      .shell{width:calc(100% - 20px);padding-top:15px}.topbar{align-items:flex-start}
+      .top-label{font-size:9px;letter-spacing:.7px}.layout{grid-template-columns:1fr}
+      .sidebar{position:static}.nav{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+      .hero{border-radius:21px}.hero-desc{font-size:14px}section{padding:19px 17px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><div class="logo" aria-hidden="true">♜</div><span>SUBSCRIBER POLICE</span></div>
+    <div class="top-label"><span class="dot"></span> PRIVACY CENTER</div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="eyebrow"><span class="dot"></span> YOUR PRIVACY MATTERS</div>
+    <div class="crest" aria-hidden="true">🛡️</div>
+    <h1 id="page-title">Privacy Policy</h1>
+    <p class="hero-desc">A clear guide to information handling for <strong>Subscriber Police</strong>, a Telegram bot designed for channel membership checks and its available commands.</p>
+    <div class="meta">
+      <span><b>●</b> Policy document</span>
+      <span>Last updated <b>October 10, 2026</b></span>
+    </div>
+  </section>
+
+  <div class="callout">
+    <div class="callout-icon">i</div>
+    <p><strong>Before publishing:</strong> This policy is tailored to the features described for this bot. The owner should verify it against the actual source code, database, logs, and hosting setup. The policy should be updated if those practices differ.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-head">POLICY CONTENTS</div>
+      <nav class="nav" aria-label="Policy sections">
+        <a href="#introduction"><span>01</span> Introduction</a>
+        <a href="#information"><span>02</span> Information processed</a>
+        <a href="#usage"><span>03</span> How information is used</a>
+        <a href="#start"><span>04</span> The /start command</a>
+        <a href="#retention"><span>05</span> Storage & retention</a>
+        <a href="#sharing"><span>06</span> Third-party services</a>
+        <a href="#security"><span>07</span> Security</a>
+        <a href="#rights"><span>08</span> User requests</a>
+        <a href="#telegram"><span>09</span> Telegram</a>
+        <a href="#changes"><span>10</span> Policy changes</a>
+        <a href="#owners"><span>11</span> Bot owners</a>
+        <a href="#contact"><span>12</span> Contact</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="introduction">
+        <div class="section-head"><div class="number">01</div><h2>Introduction</h2></div>
+        <p>Subscriber Police (“the Bot”) helps Telegram group administrators require users to join a configured channel before proceeding through the group’s access flow. The Bot also provides a <code>/start</code> command and additional help and information commands.</p>
+        <p>This policy describes information that may be processed when you interact with these features.</p>
+      </section>
+
+      <section id="information">
+        <div class="section-head"><div class="number">02</div><h2>Information That May Be Processed</h2></div>
+        <p>To respond to Telegram updates and perform membership checks, the Bot may process information such as:</p>
+        <ul>
+          <li>Telegram user IDs and chat or group IDs.</li>
+          <li>The configured channel’s identifier and membership-check results.</li>
+          <li>Commands, button interactions, and settings sent to the Bot.</li>
+          <li>Technical error records, if logging is enabled in the Bot or its hosting environment.</li>
+        </ul>
+        <p>The Bot should not need your Telegram password or login verification code. Never share those credentials with anyone.</p>
+      </section>
+
+      <section id="usage">
+        <div class="section-head"><div class="number">03</div><h2>How Information Is Used</h2></div>
+        <p>Information may be processed only as needed to operate and maintain the Bot, including to:</p>
+        <ul>
+          <li>Check whether a user has joined the required Telegram channel.</li>
+          <li>Apply force-subscription settings configured by group administrators.</li>
+          <li>Handle bot commands and provide the relevant response.</li>
+          <li>Diagnose technical problems and help protect the service, where applicable.</li>
+        </ul>
+      </section>
+
+      <section id="start">
+        <div class="section-head"><div class="number">04</div><h2><code>/start</code> Message &amp; Commands</h2></div>
+        <p>When a user sends <code>/start</code>, Subscriber Police can display an introductory message explaining that it helps manage required-channel subscriptions in Telegram groups.</p>
+        <p>The start message may also list these available commands:</p>
+        <ul>
+          <li><code>/help</code> — view help and basic instructions.</li>
+          <li><code>/tutorial</code> — view setup or usage guidance.</li>
+          <li><code>/id</code> — retrieve a Telegram ID where supported.</li>
+          <li><code>/donate</code> — voluntarily support bot improvements, performance, and maintenance.</li>
+        </ul>
+        <p>The Bot may process the command sent and related Telegram user or chat identifiers to provide the relevant response.</p>
+      </section>
+
+      <section id="retention">
+        <div class="section-head"><div class="number">05</div><h2>Storage & Retention</h2></div>
+        <p>Whether data is stored and how long it is retained depends on the Bot’s implementation and hosting configuration. The operator should keep only what is needed to run the Bot, limit access to authorized people, and delete information when it is no longer needed, except where retention is legally required or reasonably necessary for security.</p>
+      </section>
+
+      <section id="sharing">
+        <div class="section-head"><div class="number">06</div><h2>Sharing & Third-Party Services</h2></div>
+        <p>The operator should not sell personal information. Telegram processes information to provide its platform and Bot API. A hosting or infrastructure provider may process technical data needed to run the Bot. Information may also be disclosed when required by applicable law.</p>
+      </section>
+
+      <section id="security">
+        <div class="section-head"><div class="number">07</div><h2>Security</h2></div>
+        <p>Reasonable measures should be used to protect information handled by the Bot. No online service can guarantee absolute security. The operator should keep the bot token, hosting credentials, and any database credentials private, and never place secrets in a public GitHub repository.</p>
+      </section>
+
+      <section id="rights">
+        <div class="section-head"><div class="number">08</div><h2>Questions & Deletion Requests</h2></div>
+        <p>You may stop interacting with the Bot at any time. If you want to ask about information that may be stored or request deletion, contact the Bot owner or administrator through their official Telegram contact. Some information may need to be retained where required by law or for legitimate security purposes.</p>
+      </section>
+
+      <section id="telegram">
+        <div class="section-head"><div class="number">09</div><h2>Telegram & External Policies</h2></div>
+        <p>The Bot relies on Telegram for Telegram-related functionality. Telegram independently handles information under its own policies. You can read <a href="https://telegram.org/privacy" target="_blank" rel="noopener noreferrer">Telegram’s Privacy Policy</a>.</p>
+      </section>
+
+      <section id="changes">
+        <div class="section-head"><div class="number">10</div><h2>Changes to This Policy</h2></div>
+        <p>This policy may be revised when the Bot’s features or information-handling practices change. The date shown at the top should be updated whenever a material change is made.</p>
+      </section>
+
+      <section id="owners">
+        <div class="section-head"><div class="number">11</div><h2>Bot Owners &amp; Administrators</h2></div>
+        <p>For bot-related questions or support, you can contact the listed owners on Telegram:</p>
+        <ul>
+          <li><a href="https://t.me/Vishwassx" target="_blank" rel="noopener noreferrer">@Vishwassx</a></li>
+          <li><a href="https://t.me/SHUBHU_GAMING" target="_blank" rel="noopener noreferrer">@SHUBHU_GAMING</a></li>
+          <li><a href="https://t.me/SANJEETHPATEL" target="_blank" rel="noopener noreferrer">@SANJEETHPATEL</a></li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <div class="section-head"><div class="number">12</div><h2>Contact</h2></div>
+        <p>For privacy questions or data-related requests, contact the official Subscriber Police Bot owner or administrator through Telegram.</p>
+        <p><strong>Service:</strong> Subscriber Police Telegram Bot</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">SUBSCRIBER POLICE</div>
+    <div>Privacy Center · Last updated October 10, 2026</div>
+    <div class="footer-links"><a href="https://telegram.org/privacy" target="_blank" rel="noopener noreferrer">Telegram Privacy Policy</a><a href="#page-title">Back to top ↑</a></div>
+  </footer>
+</div>
+</body>
+</html>
